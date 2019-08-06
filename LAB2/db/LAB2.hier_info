@@ -1,0 +1,78 @@
+|TopModule
+nRst => nRst~0.IN3
+Clk => Clk~0.IN3
+CntEn => CntEn~0.IN1
+Co1[0] <= BCDcounter:C1.Cout
+Co1[1] <= BCDcounter:C1.Cout
+Co1[2] <= BCDcounter:C1.Cout
+Co1[3] <= BCDcounter:C1.Cout
+Co10[0] <= BCDcounter:C10.Cout
+Co10[1] <= BCDcounter:C10.Cout
+Co10[2] <= BCDcounter:C10.Cout
+Co10[3] <= BCDcounter:C10.Cout
+Co100[0] <= BCDcounter:C100.Cout
+Co100[1] <= BCDcounter:C100.Cout
+Co100[2] <= BCDcounter:C100.Cout
+Co100[3] <= BCDcounter:C100.Cout
+
+
+|TopModule|BCDcounter:C1
+nRst => Cout[3]~reg0.ACLR
+nRst => Cout[2]~reg0.ACLR
+nRst => Cout[1]~reg0.ACLR
+nRst => Cout[0]~reg0.ACLR
+Clk => Cout[3]~reg0.CLK
+Clk => Cout[2]~reg0.CLK
+Clk => Cout[1]~reg0.CLK
+Clk => Cout[0]~reg0.CLK
+CntEn => Cout[0]~reg0.ENA
+CntEn => Cout[3]~reg0.ENA
+CntEn => Cout[2]~reg0.ENA
+CntEn => Cout[1]~reg0.ENA
+NextEn <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[0] <= Cout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[1] <= Cout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[2] <= Cout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[3] <= Cout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|BCDcounter:C10
+nRst => Cout[3]~reg0.ACLR
+nRst => Cout[2]~reg0.ACLR
+nRst => Cout[1]~reg0.ACLR
+nRst => Cout[0]~reg0.ACLR
+Clk => Cout[3]~reg0.CLK
+Clk => Cout[2]~reg0.CLK
+Clk => Cout[1]~reg0.CLK
+Clk => Cout[0]~reg0.CLK
+CntEn => Cout[0]~reg0.ENA
+CntEn => Cout[3]~reg0.ENA
+CntEn => Cout[2]~reg0.ENA
+CntEn => Cout[1]~reg0.ENA
+NextEn <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[0] <= Cout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[1] <= Cout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[2] <= Cout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[3] <= Cout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|BCDcounter:C100
+nRst => Cout[3]~reg0.ACLR
+nRst => Cout[2]~reg0.ACLR
+nRst => Cout[1]~reg0.ACLR
+nRst => Cout[0]~reg0.ACLR
+Clk => Cout[3]~reg0.CLK
+Clk => Cout[2]~reg0.CLK
+Clk => Cout[1]~reg0.CLK
+Clk => Cout[0]~reg0.CLK
+CntEn => Cout[0]~reg0.ENA
+CntEn => Cout[3]~reg0.ENA
+CntEn => Cout[2]~reg0.ENA
+CntEn => Cout[1]~reg0.ENA
+NextEn <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[0] <= Cout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[1] <= Cout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[2] <= Cout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cout[3] <= Cout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
