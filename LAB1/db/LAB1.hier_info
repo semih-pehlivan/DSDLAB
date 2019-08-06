@@ -1,0 +1,28 @@
+|TopModule
+Clk => Clk~0.IN1
+nAReset => nAReset~0.IN1
+Select => Select~0.IN1
+FOut <= Selection:S1.port3
+
+
+|TopModule|Counting:C1
+Clk => CountOut[2]~reg0.CLK
+Clk => CountOut[1]~reg0.CLK
+Clk => CountOut[0]~reg0.CLK
+nAReset => CountOut[2]~reg0.ACLR
+nAReset => CountOut[1]~reg0.ACLR
+nAReset => CountOut[0]~reg0.ACLR
+CountOut[0] <= CountOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CountOut[1] <= CountOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CountOut[2] <= CountOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|Selection:S1
+Opr1 => FOut~1.IN0
+Opr1 => FOut~0.IN0
+Opr2 => FOut~1.IN1
+Opr2 => FOut~0.IN1
+Select => FOut~2.OUTPUTSELECT
+FOut <= FOut~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.260 ns
+From           : Counting:C1|CountOut[0]
+To             : FOut
+From Clock     : Clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.807 ns
+From           : Select
+To             : FOut
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : Counting:C1|CountOut[2]
+To             : Counting:C1|CountOut[2]
+From Clock     : Clk
+To Clock       : Clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
