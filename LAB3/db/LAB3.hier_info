@@ -1,0 +1,28 @@
+|TopModule
+Clk => Clk~0.IN2
+In => In~0.IN2
+Out1 <= debouncer1:d1.port2
+Out2 <= debouncer2:d2.port2
+
+
+|TopModule|debouncer1:d1
+Clk => Temp[3].CLK
+Clk => Temp[2].CLK
+Clk => Temp[1].CLK
+Clk => Temp[0].CLK
+Clk => Out~reg0.CLK
+In => Temp[0].DATAIN
+Out <= Out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|debouncer2:d2
+Clk => Temp[3].CLK
+Clk => Temp[2].CLK
+Clk => Temp[1].CLK
+Clk => Temp[0].CLK
+In => Temp[0].DATAIN
+In => always0~0.IN1
+In => always0~3.IN1
+Out <= Temp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

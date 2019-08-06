@@ -1,0 +1,8 @@
+module TopModule(Clk,In,Out1,Out2);
+	input Clk, In;
+	output Out1, Out2;
+
+	debouncer1 d1(In,Out1,Clk); 
+	debouncer2 d2(In,Out2,Clk); 
+	
+endmodule
